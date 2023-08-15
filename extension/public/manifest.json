@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Extension",
+  "name": "Mnemonize",
   "version": "0.1.0",
-  "description": "My Chrome Extension",
+  "description": "Create memorable glue to remember values from keys",
   "permissions": [
     "storage",
     "notifications",

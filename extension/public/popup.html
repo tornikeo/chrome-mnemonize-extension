@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <title>My Chrome Extension</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
     <link rel="stylesheet" href="popup.css" />
   </head>
   <body>
-    <div class="app">
+    <!-- <div class="app">
       <p class="counter-label">Counter</p>
       <div id="counter" class="counter"></div>
       <div class="button-container">
@@ -18,8 +19,19 @@
 
       <p class="title">Chrome Extension is Ready!</p>
       <p class="subtitle">Start by updating <code>popup.html</code></p>
-    </div>
+    </div> -->
 
+    <main class="container">
+      <section id="main">
+        <h2>Create a mnemonic</h2>
+        <form id="mnemonicForm">
+          <input type="text" name="key" id="key" placeholder="Key" aria-label="key" required>
+          <input type="text" name="value" id="value" placeholder="Value" aria-label="value" required>
+          <button type="submit">Mnemonize!</button>
+        </form>
+
+      </section>
+    </main>
     <script src="popup.js"></script>
 
     <!--
