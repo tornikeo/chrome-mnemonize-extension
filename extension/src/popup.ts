@@ -124,19 +124,42 @@ import './popup.css';
     }
   )
   
+  const mnemonics = [
+    {key: "Mina", value: "me", mnemonic: "Mina is me"},
+    {key: "Sina", value: "you", mnemonic: "Sina is you"},
+  ]
+
+  function showAndUpdate(elem: HTMLElement) {
+    if ($(elem).attr('id') === 'review') {
+      console.log("You have ", mnemonics.length, "mnemonics");
+      if (mnemonics.length > 0) {
+        mnemonics.forEach(
+          ({key, value, mnemonic}) => {
+            $('#mnemonicsList').append(`<li>${key}:${value}:${mnemonic}</li>`)
+          }
+        )
+        console.log('SHOWING on #noMnemonicsPlaceholder');
+        $('#noMnemonicsPlaceholder').hide();
+        $('#mnemonicsList').show();
+      }
+    }
+    $(elem).show();
+  }
+
   $('.switch').on('click', function (e) {
     e.preventDefault();
     const text = $(this).text().toLowerCase();
     console.log(text);
     $('.page').each((i, e) => { 
       if ($(e).attr('id') === text) {
-        $(e).show();
+        showAndUpdate(e)
       } else {
         $(e).hide();
       }
     })
     return false;
   })
+  
 
 
 })();
