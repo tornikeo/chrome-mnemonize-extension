@@ -128,7 +128,6 @@ import './popup.css';
     e.preventDefault();
     const text = $(this).text().toLowerCase();
     console.log(text);
-    
     $('.page').each((i, e) => { 
       if ($(e).attr('id') === text) {
         $(e).show();
@@ -138,5 +137,6 @@ import './popup.css';
     })
     return false;
   })
+
 
 })();

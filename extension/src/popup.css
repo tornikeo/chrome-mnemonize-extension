@@ -16,3 +16,12 @@ switch {
 .hidden {
   display: none;
 }
+
+.center-text {
+  text-align: center;
+}
+
+.no-found {
+  color: #dadce0;
+  font: 120px/1.25 Google Sans,Helvetica Neue,sans-serif;
+}
