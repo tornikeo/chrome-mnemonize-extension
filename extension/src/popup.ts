@@ -123,4 +123,20 @@ import './popup.css';
       await chrome.storage.sync.set(toSet)
     }
   )
+  
+  $('.switch').on('click', function (e) {
+    e.preventDefault();
+    const text = $(this).text().toLowerCase();
+    console.log(text);
+    
+    $('.page').each((i, e) => { 
+      if ($(e).attr('id') === text) {
+        $(e).show();
+      } else {
+        $(e).hide();
+      }
+    })
+    return false;
+  })
+
 })();

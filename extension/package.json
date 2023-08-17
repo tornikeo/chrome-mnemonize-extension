@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@types/chrome": "^0.0.181",
+    "@types/jquery": "^3.5.16",
     "adm-zip": "^0.5.10",
     "copy-webpack-plugin": "^10.2.4",
     "css-loader": "^6.8.1",

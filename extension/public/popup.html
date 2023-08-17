@@ -5,6 +5,7 @@
     <title>My Chrome Extension</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
     <link rel="stylesheet" href="popup.css" />
+    <script src="ajax.googleapis.com_ajax_libs_jquery_3.6.4_jquery.min.js"></script>
   </head>
   <body>
     <!-- <div class="app">
@@ -20,16 +21,32 @@
       <p class="title">Chrome Extension is Ready!</p>
       <p class="subtitle">Start by updating <code>popup.html</code></p>
     </div> -->
-
+    <header class="container">
+      <nav>
+        <ul>
+          <li><strong>Mnemonize</strong></li>
+          <li><a class="switch" href="#">Create</a></li>
+          <li><a class="switch" href="#">Review</a></li>
+        </ul>
+      </nav>
+    </header>
     <main class="container">
-      <section id="main">
-        <h2>Create a mnemonic</h2>
+      <section id="create" class="page">
+        <h3>Create a mnemonic</h3>
         <form id="mnemonicForm">
           <input type="text" name="key" id="key" placeholder="Key" aria-label="key" required>
           <input type="text" name="value" id="value" placeholder="Value" aria-label="value" required>
           <button type="submit">Mnemonize!</button>
         </form>
-
+      </section>
+      <section id="review" class="page hidden">
+        <h3>Your saved mnemonics</h3>
+        <ul>
+          <li>Aliquam lobortis lacus eu libero ornare facilisis.</li>
+          <li>Nam et magna at libero scelerisque egestas.</li>
+          <li>Suspendisse id nisl ut leo finibus vehicula quis eu ex.</li>
+          <li>Proin ultricies turpis et volutpat vehicula.</li>
+        </ul>
       </section>
     </main>
     <script src="popup.js"></script>
