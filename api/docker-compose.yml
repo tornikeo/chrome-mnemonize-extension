@@ -1,0 +1,11 @@
+services:
+  app:
+    build: .
+    env_file: .env
+    environment:
+      - OPENAI_API_KEY
+      - PORT=8080
+    volumes:
+      - .:/workdir
+    ports:
+      - 8080:8080
