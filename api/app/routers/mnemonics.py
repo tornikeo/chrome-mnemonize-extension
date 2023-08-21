@@ -9,10 +9,11 @@ class Request(BaseModel):
     value: str
     
 class Response(BaseModel):
-    result: str
+    mnemonic: str
+    explanation: str
     
 @app.post('/', response_model=Response)
 def create_mnemonic(request: Request):
     return Response(
-        result=basic.create_mnemonic(request.key,request.value)
+        **basic.create_mnemonic(request.key,request.value)
     )

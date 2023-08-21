@@ -1,6 +1,9 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from .routers import mnemonics
+import dotenv
+
+dotenv.load_dotenv()
 
 app = FastAPI(debug=True)
 
