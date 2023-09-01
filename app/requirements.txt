@@ -1,6 +1,0 @@
-pytest
-httpx
-requests
-fastapi
-pydantic
-uvicorn
